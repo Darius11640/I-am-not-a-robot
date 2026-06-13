@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Not a Robot Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🤖 I'm Not a Robot</h1>
+        <div class="scoreboard">
+            Score: <span id="scoreDisplay">0</span> | Round: <span id="roundDisplay">0</span>
+        </div>
+        <!-- Level type will appear here (injected by JS) -->
+
+        <div class="recaptcha-widget" id="recaptchaWidget">
+            <!-- Checkbox row -->
+            <div class="checkbox-area" id="checkboxArea">
+                <div class="custom-checkbox"></div>
+                <span class="checkbox-text">I'm not a robot</span>
+                <div class="spinner"></div>
+            </div>
+
+            <!-- Challenge area (hidden by default) -->
+            <div class="challenge-area" id="challengeArea">
+                <div class="challenge-prompt" id="challengePrompt"></div>
+                <div class="image-grid" id="imageGrid"></div>
+                <button class="verify-btn" id="verifyBtn">Verify</button>
+            </div>
+
+            <!-- Fake reCAPTCHA branding -->
+            <div class="recaptcha-logo">
+                <span class="logo-icon">🔒</span>
+                <span class="logo-text">reCAPTCHA</span>
+            </div>
+            <div class="fake-links">
+                <span>Privacy</span>
+                <span>Terms</span>
+            </div>
+
+            <!-- Message overlay -->
+            <div class="message-overlay" id="messageOverlay">
+                <div class="message-badge" id="messageBadge"></div>
+            </div>
+        </div>
+
+        <button class="reset-btn" id="resetBtn">↺ Reset Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
